@@ -1,3 +1,4 @@
 Rails.application.routes.draw do
-  root 'shallows#welcome'
+  devise_for :users
+  root to: 'shallows#welcome'
 end
