@@ -23,4 +23,7 @@
 *REMOTE*
 *LOCAL*
 
-*/application.yml
+#*/application.yml
+
+# Ignore application configuration
+/config/application.yml
