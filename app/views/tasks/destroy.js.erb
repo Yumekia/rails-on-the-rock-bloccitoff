@@ -1,0 +1,6 @@
+<% if @task.destroyed? %>
+  $('#task-' +<%= @task.id %>).hide();
+     $('.js-tasks-count').html("<%= pluralize(@task.user.tasks.count, 'task') %>");
+<% else %>
+  $('#task-' +<%= @task.id %>).prepend("<div class='alert alert-danger'><%= flash[:error] %></div>");
+<% end %>

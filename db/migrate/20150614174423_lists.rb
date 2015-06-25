@@ -4,8 +4,7 @@ class Lists < ActiveRecord::Migration
       t.string :title
       t.references :user
       
-      t.timestamps null: false
-  end
-  add_foreign_key :lists, :users
+      t.timestamps
+    end
   end
 end

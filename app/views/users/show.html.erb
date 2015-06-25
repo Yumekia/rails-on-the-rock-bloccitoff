@@ -1,0 +1,13 @@
+<div class="row">
+   <div class="col-md-8">
+     <div class="media">
+       <div class="media-body">
+         <h2 class="media-heading"><%= @user.name %></h2>
+         <small>
+           <%= pluralize(@user.lists.count, 'list') %>,
+             <div class='js-tasks-count'><%= pluralize(@user.tasks.count, 'task') %></div>
+         </small>
+       </div>
+     </div>
+   </div>
+ </div>
