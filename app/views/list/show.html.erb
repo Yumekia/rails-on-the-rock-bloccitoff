@@ -1,0 +1,21 @@
+<h1><%= @task.name %></h1>
+ 
+ <% if list(@task).update? %>
+   <%= link_to "Edit Task", edit_task_path, class: 'btn btn-success' %>
+ <% end %>
+ 
+ <div class="row">
+   <div class="col-md-8">
+     <p class="lead"><%= @task.description %></p>
+       <%= render @lists %>
+   </div>
+   <div class="col-md-4">
+     <% if list(list.new).create? %>
+     <%= link_to "New list", new_task_list_path(@task), class: 'btn btn-success' %>
+   <% end %>  
+     
+     <% if list(@task).destroy? %>
+       <%= link_to "Delete Task", @task, method: :delete, class: 'btn btn-danger', data: { confirm: "Delete?" } %> 
+     <% end %>
+   </div>   
+ </div>

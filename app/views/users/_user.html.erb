@@ -1,0 +1,9 @@
+<div class="media">
+     <h4 class="media-heading">
+       <%= link_to user.name, user %>
+     </h4>
+     <small>
+       <%= pluralize(user.lists_count, 'list') %>,
+       <%= pluralize(user.tasks_count, 'task') %>
+     </small>
+</div>

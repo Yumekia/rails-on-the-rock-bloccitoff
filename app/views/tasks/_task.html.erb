@@ -1,0 +1,11 @@
+<%= content_tag :div, class: 'media', id: "task-#{task.id}" do %>
+    <small>
+      <%= task.user.name %> task <%= time_ago_in_words(task.created_at) %> ago
+      <% if list(task).destroy? %>
+      | <%= link_to "Delete", [task.list, task], method: :delete, remote: true %>
+      <% end %>
+    </small>
+    <p><%= task.description %></p>
+  </div>
+<% end %>
+
