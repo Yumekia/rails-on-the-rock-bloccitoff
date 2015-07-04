@@ -1,0 +1,9 @@
+<%= @list.present? ? "List is here" : "Nothing Here" %>
+
+<div class="row">
+ <div class="col-xs-12">
+  <h1><%= "#{@list.user.name}'s List" %></h1>
+  <h1><%= @list.tasks.new(description: "Buy fireworks!").description %></h1>
+  <p> Posted by <%= @list.user.name %></p>
+ </div>
+</div>
